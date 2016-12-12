@@ -5,7 +5,11 @@ import Preloader from './states/preloader';
 import Gameover from './states/gameover';
 
 
-const game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, 'chinese-chess-game');
+// const w = window.innerWidth
+// const h = window.innerHeight
+const w = 482 + 20 * 2
+const h = 543 + 20 * 2
+const game = new Phaser.Game(w, h, Phaser.AUTO, 'chinese-chess-game');
 
 game.state.add('boot', new Boot());
 game.state.add('game', new Game());
