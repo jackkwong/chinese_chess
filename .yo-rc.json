@@ -1,0 +1,7 @@
+{
+  "generator-phaser": {
+    "projectName": "chinese-chess",
+    "esVersion": 6,
+    "gameFolder": "boilerplate"
+  }
+}
