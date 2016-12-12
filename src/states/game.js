@@ -5,11 +5,8 @@ class Game extends Phaser.State {
   }
 
   create() {
-    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, 'Game', {
-      font: '42px Arial', fill: '#ffffff', align: 'center'
-    });
-    text.anchor.set(0.5);
-
+    let chessboard = this.game.add.sprite(this.game.width / 2, this.game.height / 2, 'chessboard');
+    chessboard.anchor.set(0.5);
     this.input.onDown.add(this.endGame, this);
   }
 
