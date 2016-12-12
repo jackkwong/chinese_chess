@@ -12,18 +12,19 @@ class Preloader extends Phaser.State {
     this.load.setPreloadSprite(this.asset);
 
     //Setup loading and its events
-    //this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
-    //this.loadResources();
+    this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
+    this.loadResources();
   }
 
   update() {
-      // if (this.ready) {
+      if (this.ready) {
         this.game.state.start('menu');
-      // }
+      }
   }
 
   loadResources() {
       // load your resources here
+      this.game.load.image('chessboard', 'assets/chessboard.png');
   }
 
   onLoadComplete() {
