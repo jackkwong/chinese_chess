@@ -25,6 +25,7 @@ class Preloader extends Phaser.State {
   loadResources() {
       // load your resources here
       this.game.load.image('chessboard', 'assets/chessboard.png');
+      this.game.load.image('pieces', 'assets/pieces.jpg');
   }
 
   onLoadComplete() {
